@@ -3,15 +3,15 @@ const nextConfig = {
     // 1. Abilita l'esportazione statica
     // Questa è l'opzione fondamentale per il deployment statico.
     // Dice a Next.js di generare una cartella 'out/' con file HTML/CSS/JS.
-    output: "export",
+    // output: "export",
 
     // 2. Configurazione Immagini (Raccomandata per l'export statico)
     // Se usi ancora il componente <Image> di Next.js in altre parti del sito
     // (anche se ne hai sostituito uno con <img>), devi disabilitare
     // l'ottimizzazione server-side che non funzionerebbe in un ambiente statico.
-    images: {
-        unoptimized: true,
-    },
+    // images: {
+    //     unoptimized: true,
+    // },
 
     async redirects() {
         return [
