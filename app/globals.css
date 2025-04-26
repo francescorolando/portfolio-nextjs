@@ -160,13 +160,13 @@
     }
 
     .text-outline {
-        -webkit-text-stroke: 1px #ffffff;
+        -webkit-text-stroke: 1px var(--color-accent);
     }
 
     /* customized */
-    .group-services:hover .text-outline {
+    /* .group-services:hover .text-outline {
         -webkit-text-stroke: 1px var(--color-accent);
-    }
+    } */
 
     /* * {
         border: 2px solid red;

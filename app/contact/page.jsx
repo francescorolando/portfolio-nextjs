@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -21,21 +23,36 @@ const info = [
     {
         icon: <FaPhoneAlt />,
         title: "Phone:",
-        description: "(+40) 321 654 876",
+        description: "+39 329 1133841",
     },
     {
         icon: <FaEnvelope />,
-        title: "Email",
-        description: "youremail@gmail.com",
+        title: "E-mail:",
+        description: "work@francescorolando.com",
     },
     {
         icon: <FaMapMarkerAlt />,
-        title: "Address",
-        description: "Code Corner, Tech Town 13579",
+        title: "Where:",
+        description: "Biella / Turin, Italy",
     },
 ];
 
 const Contact = () => {
+    // 1. crea un Ref per l'elemento input "Firstname"
+    const firstNameInputRef = useRef(null);
+
+    // 2. usa useEffect per eseguire il codice dopo il mount del componente
+    useEffect(() => {
+        // controlla se l'hash nell'URL corrisponde all'ID che ci interessa
+        if (window.location.hash === "#firstname-input") {
+            // se il ref è stato collegato all'elemento input...
+            if (firstNameInputRef.current) {
+                // ...applica il focus a quell'elemento!
+                firstNameInputRef.current.focus();
+            }
+        }
+    }, []);
+
     return (
         <motion.section
             initial={{ opacity: 0 }}
@@ -46,16 +63,22 @@ const Contact = () => {
                 <div className="flex flex-col xl:flex-row gap-[30px]">
                     {/* form */}
                     <div className="xl:w-[54%] order-2 xl:order-none">
-                        <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+                        <form
+                            action="/work-in-progress"
+                            className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+                        >
                             <h3 className="text-4xl text-accent">Let's work together</h3>
-                            <p className="text-white/60">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                                molestiae velit autem praesentium repudiandae?
-                            </p>
+                            <p className="text-white/60">Fill out the form and contact me!</p>
 
                             {/* input */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <Input type="firstname" placeholder="Firstname" />
+                                {/* 3. aggiungi l'ID e collega il Ref all'input "Firstname" */}
+                                <Input
+                                    ref={firstNameInputRef} // collega il ref
+                                    id="firstname-input" // aggiungi l'ID corrispondente all'hash
+                                    type="firstname"
+                                    placeholder="Firstname"
+                                />
                                 <Input type="lastname" placeholder="Lastname" />
                                 <Input type="email" placeholder="Email address" />
                                 <Input type="phone" placeholder="Phone number" />
@@ -71,7 +94,7 @@ const Contact = () => {
                                         <SelectLabel>Select a service</SelectLabel>
                                         <SelectItem value="est">Web Development</SelectItem>
                                         <SelectItem value="cst">UI/UX Design</SelectItem>
-                                        <SelectItem value="mst">Logo Design</SelectItem>
+                                        <SelectItem value="mst">SEO</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>

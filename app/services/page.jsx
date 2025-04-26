@@ -8,26 +8,30 @@ const services = [
     {
         num: "01",
         title: "Web Development",
-        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis illo.",
-        href: "",
+        description:
+            "Development of performant and responsive websites using secure and modern web standards.",
+        href: "/work-in-progress",
     },
     {
         num: "02",
         title: "UI/UX Design",
-        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis illo.",
-        href: "",
+        description:
+            "Design of intuitive user interfaces (UI) and optimal user experiences (UX) for digital products.",
+        href: "/work-in-progress",
     },
     {
         num: "03",
-        title: "Logo Design",
-        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis illo.",
-        href: "",
+        title: "Copywriting",
+        description:
+            "Writing effective marketing and advertising copy designed to persuade, inform, and engage target audiences.",
+        href: "/work-in-progress",
     },
     {
         num: "04",
         title: "SEO",
-        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis illo.",
-        href: "",
+        description:
+            "Search engine optimization (SEO) focused on improving website rankings and organic traffic acquisition.",
+        href: "/work-in-progress",
     },
 ];
 

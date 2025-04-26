@@ -30,9 +30,17 @@ const Home = () => {
                                 variant="outline"
                                 size="lg"
                                 className="uppercase flex items-center gap-2"
+                                asChild // lo stile sarà trasmesso al tag <a>
                             >
-                                <span>Download CV</span>
-                                <FiDownload className="text-xl" />
+                                <a
+                                    href="/assets/CV_Rolando_Francesco.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    // download // per scaricarlo direttamente
+                                >
+                                    <span>Download CV</span>
+                                    <FiDownload className="text-xl" />
+                                </a>
                             </Button>
                             <div className="mb-8 xl:mb-0">
                                 <Social

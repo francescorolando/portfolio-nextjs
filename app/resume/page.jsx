@@ -12,20 +12,19 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 // about data
 const about = {
     title: "About me",
-    description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae a eveniet id dignissimos!",
+    description: "Here are some infos about myself. Feel free to contact me!",
     info: [
         {
             fieldName: "Name",
-            fieldValue: "Luke Coleman",
+            fieldValue: "Francesco Rolando",
         },
         {
             fieldName: "Phone",
-            fieldValue: "(+40) 321 654 678",
+            fieldValue: "329 1133841",
         },
         {
             fieldName: "Experience",
-            fieldValue: "12+ Years",
+            fieldValue: "4 Years",
         },
         {
             fieldName: "Skype",
@@ -33,11 +32,11 @@ const about = {
         },
         {
             fieldName: "Nationality",
-            fieldValue: "American",
+            fieldValue: "Italian",
         },
         {
             fieldName: "Email",
-            fieldValue: "luke.01@gmail.com",
+            fieldValue: "work@francescorolando.com",
         },
         {
             fieldName: "Freelance",
@@ -45,7 +44,7 @@ const about = {
         },
         {
             fieldName: "Languages",
-            fieldValue: "English, Spanish",
+            fieldValue: "Italian, English, Spanish",
         },
     ],
 };
@@ -315,7 +314,7 @@ const Resume = () => {
                                         return (
                                             <li
                                                 key={index}
-                                                className="flex items-center justify-center xl:justify-start gap-4"
+                                                className="flex items-start justify-center xl:justify-start gap-4"
                                             >
                                                 <span className="text-white/60">
                                                     {item.fieldName}
