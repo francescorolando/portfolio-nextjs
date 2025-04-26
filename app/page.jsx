@@ -16,7 +16,7 @@ const Home = () => {
                         {/* <span className="text-xl">Web Developer</span> */}
                         <h1 className="h1 mb-6">
                             Hello I'm <br />
-                            <span className="text-accent">Francesco BALENGO</span>
+                            <span className="text-accent">Francesco Rolando</span>
                         </h1>
                         <p className="text-2xl mb-9 text-white/80">Web developer</p>
                         {/* <p className="max-w-[500px] mb-9 text-white/80">
