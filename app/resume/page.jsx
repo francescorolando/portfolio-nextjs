@@ -1,7 +1,8 @@
 "use client";
 
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaNode } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaPhp } from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs, SiPhp } from "react-icons/si";
+import { TbSql } from "react-icons/tb";
 import { motion } from "framer-motion";
 
 // components
@@ -9,82 +10,42 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-// about data
-const about = {
-    title: "About me",
-    description: "Here are some infos about myself. Feel free to contact me!",
-    info: [
-        {
-            fieldName: "Name",
-            fieldValue: "Francesco Rolando",
-        },
-        {
-            fieldName: "Phone",
-            fieldValue: "329 1133841",
-        },
-        {
-            fieldName: "Experience",
-            fieldValue: "4 Years",
-        },
-        {
-            fieldName: "Skype",
-            fieldValue: "luke.01",
-        },
-        {
-            fieldName: "Nationality",
-            fieldValue: "Italian",
-        },
-        {
-            fieldName: "Email",
-            fieldValue: "work@francescorolando.com",
-        },
-        {
-            fieldName: "Freelance",
-            fieldValue: "Available",
-        },
-        {
-            fieldName: "Languages",
-            fieldValue: "Italian, English, Spanish",
-        },
-    ],
-};
-
 // experience data
 const experience = {
     icon: "/assets/resume/badge.svg",
     title: "My experience",
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae a eveniet id dignissimos!",
+        "List of my main work experiences in web development, communication and academic teaching.",
     items: [
         {
-            company: "Tech Solutions Inc.",
-            position: "Full Stack Developer",
-            duration: "2022 - Present",
+            company: "Physical therapy studio",
+            position: "Communication and web development",
+            duration: "2024 - Present",
         },
         {
-            company: "Web Design Studio",
-            position: "Front-End Developer Intern",
-            duration: "Summer 2021",
+            company: "Web editorial - UniTo",
+            position: "Web and content development",
+            duration: "2025 - Present",
         },
         {
-            company: "E-commerce Startup",
-            position: "Freelance Web Developer",
-            duration: "2020 - 2021",
+            company: "Genitori Sempre Lessona",
+            position: "Web development",
+            duration: "2024 - 2025",
         },
         {
-            company: "Tech Academy",
-            position: "Teaching Assistant",
+            company: "University of Turin",
+            position: "Data Analysis Teaching Assistant",
+            duration: "2024 - 2025",
+        },
+        {
+            company: "Web editorial - UniTo",
+            position: "Web and content development",
+            duration: "2023 - 2024",
+        },
+        {
+            company: "City of Candelo (BI)",
+            position: "Customer reception",
             duration: "2019 - 2020",
-        },
-        {
-            company: "Digital Agency",
-            position: "UI/UX Designer",
-            duration: "2018 - 2019",
-        },
-        {
-            company: "Software Development Firm",
-            position: "Junior Developer",
-            duration: "2017 - 2018",
         },
     ],
 };
@@ -93,38 +54,37 @@ const experience = {
 const education = {
     icon: "/assets/resume/cap.svg",
     title: "My Education",
-    description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae a eveniet id dignissimos!",
+    description: "List of my main academic and educational experiences. ",
     items: [
         {
-            institution: "Online Course Platform",
-            degree: "Full Stack Web Development Camp",
-            duration: "2023",
+            institution: "Master's degree - UniTo",
+            degree: "Communication, ICTs and Media",
+            duration: "2024-2026",
         },
         {
-            institution: "Codecademy",
-            degree: "Front-end Track",
+            institution: "Bachelor's degree - UniTo",
+            degree: "ICTs",
+            duration: "2021 - 2024",
+        },
+        {
+            institution: "Manhattan College NYC",
+            degree: "English course",
             duration: "2022",
         },
         {
-            institution: "Online Course",
-            degree: "Programming Course",
-            duration: "2020 - 2021",
-        },
-        {
-            institution: "Tech Institute",
-            degree: "Certified Web Developer",
+            institution: "Rotary Club",
+            degree: "Intercultural exchange - Argentina",
             duration: "2019",
         },
         {
-            institution: "Design School",
-            degree: "Diploma in Graphic Design",
-            duration: "2016 - 2018",
+            institution: "ILC School Varese",
+            degree: "Spanish course",
+            duration: "2018",
         },
         {
-            institution: "Community College",
-            degree: "Associate Degree in Computer Science",
-            duration: "2014 - 2016",
+            institution: "Highschool siploma",
+            degree: "Liceo Linguistico",
+            duration: "2016 - 2021",
         },
     ],
 };
@@ -132,8 +92,7 @@ const education = {
 // skills data
 const skills = {
     title: "My Skills",
-    description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae a eveniet id dignissimos!",
+    description: "An overview of the tools I use most for my projects.",
     skillList: [
         {
             icon: <FaHtml5 />,
@@ -152,10 +111,6 @@ const skills = {
             name: "react.js",
         },
         {
-            icon: <SiNextdotjs />,
-            name: "next.js",
-        },
-        {
             icon: <SiTailwindcss />,
             name: "tailwind.css",
         },
@@ -164,8 +119,60 @@ const skills = {
             name: "node.js",
         },
         {
+            icon: <SiNextdotjs />,
+            name: "next.js",
+        },
+        {
+            icon: <SiPhp />,
+            name: "php",
+        },
+        {
+            icon: <TbSql />,
+            name: "sql",
+        },
+        {
             icon: <FaFigma />,
             name: "figma",
+        },
+    ],
+};
+
+// about data
+const about = {
+    title: "About me",
+    description: "Here are some infos about myself.",
+    info: [
+        {
+            fieldName: "Name:",
+            fieldValue: "Francesco Rolando",
+        },
+        {
+            fieldName: "Phone:",
+            fieldValue: "+39 329 1133841",
+        },
+        {
+            fieldName: "Experience:",
+            fieldValue: "4 Years",
+        },
+        {
+            fieldName: "LinkedIn:",
+            fieldValue: "francescorolando",
+        },
+        {
+            fieldName: "Nationality:",
+            fieldValue: "Italian",
+        },
+        {
+            fieldName: "Email:",
+            fieldValue: "work@francescorolando.com",
+        },
+        {
+            fieldName: "Freelance:",
+            fieldValue: "Available",
+        },
+        {
+            fieldName: "Languages:",
+            fieldValue: "Italian, English, Spanish",
         },
     ],
 };
@@ -179,7 +186,8 @@ const Resume = () => {
         >
             <div className="container mx-auto">
                 <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
-                    <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+                    <TabsList className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 w-full max-w-[380px] sm:max-w-[600px] xl:max-w-[380px] mx-auto xl:mx-0 gap-6 xl:self-start">
+                        {/* <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6"> */}
                         <TabsTrigger value="experience">Experience</TabsTrigger>
                         <TabsTrigger value="education">Education</TabsTrigger>
                         <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -196,7 +204,7 @@ const Resume = () => {
                                     {experience.description}
                                 </p>
                                 <ScrollArea className="h-[400px]">
-                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
                                         {experience.items.map((item, index) => {
                                             return (
                                                 <li
@@ -235,7 +243,7 @@ const Resume = () => {
                                     {education.description}
                                 </p>
                                 <ScrollArea className="h-[400px]">
-                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
                                         {education.items.map((item, index) => {
                                             return (
                                                 <li
@@ -275,14 +283,14 @@ const Resume = () => {
                                         {skills.description}
                                     </p>
                                 </div>
-                                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                                <ul className="grid grid-cols-2 md:grid-cols-5 gap-4 xl:gap-[30px]">
                                     {skills.skillList.map((skill, index) => {
                                         return (
                                             <li key={index}>
                                                 <TooltipProvider delayDuration={100}>
                                                     <Tooltip>
                                                         {/* logo */}
-                                                        <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                                                        <TooltipTrigger className="w-[85%] sm:w-[80%] md:w-full h-[150px] md:h-[130px] bg-[#232329] rounded-xl flex justify-center items-center group mx-auto">
                                                             <div className="text-6xl group-hover:text-accent transition-all duration-300">
                                                                 {skill.icon}
                                                             </div>
@@ -309,17 +317,17 @@ const Resume = () => {
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                                     {about.description}
                                 </p>
-                                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 mx-auto xl:mx-0">
                                     {about.info.map((item, index) => {
                                         return (
                                             <li
                                                 key={index}
-                                                className="flex items-start justify-center xl:justify-start gap-4"
+                                                className="flex items-start justify-start gap-4"
                                             >
                                                 <span className="text-white/60">
                                                     {item.fieldName}
                                                 </span>
-                                                <span className="text-xl">{item.fieldValue}</span>
+                                                <span className="">{item.fieldValue}</span>
                                             </li>
                                         );
                                     })}

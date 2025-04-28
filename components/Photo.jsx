@@ -1,7 +1,7 @@
 "use client";
 
 import { animate, motion } from "framer-motion";
-// import Image from "next/image";
+import Image from "next/image";
 
 const Photo = () => {
     return (
@@ -21,21 +21,21 @@ const Photo = () => {
                 >
                     {/* Sostituisci <Image /> con <img> */}
 
-                    {/* <Image
+                    <Image
                         src="/assets/photo.png"
                         priority
                         quality={100}
                         fill
                         alt=""
                         className="object-contain"
-                    /> */}
+                    />
 
-                    <img
-                        src="/assets/photo.png"
+                    {/* <img
+                        src="/assets/cropped_image.png"
                         alt="Foto profilo" // IMPORTANTE: Aggiungi un testo alternativo descrittivo!
                         className="absolute inset-0 h-full w-full object-contain" // Stili per riempire il contenitore mantenendo le proporzioni
                         loading="lazy" // Aggiunge il lazy loading nativo del browser (opzionale ma consigliato)
-                    />
+                    /> */}
                 </motion.div>
 
                 {/* circle */}

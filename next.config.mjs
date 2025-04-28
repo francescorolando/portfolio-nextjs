@@ -25,11 +25,11 @@ const nextConfig = {
                 destination: "/work-in-progress", // La pagina di destinazione
                 permanent: false, // IMPORTANTE: false per redirect temporaneo (status code 307)
             }, */
-            {
+            /* {
                 source: "/resume", // L'indirizzo originale
                 destination: "/work-in-progress", // La pagina di destinazione
                 permanent: false, // IMPORTANTE: false per redirect temporaneo (status code 307)
-            },
+            }, */
             {
                 source: "/work", // L'indirizzo originale
                 destination: "/work-in-progress", // La pagina di destinazione
