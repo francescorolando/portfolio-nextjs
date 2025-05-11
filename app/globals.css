@@ -13,9 +13,137 @@
     --breakpoint-xl: 1200px;
 
     /* modifica della palette */
-    --color-primary: #1c1c22;
+
+    /*  NORMAL */
+    --color-primary: #08080a;
+    /*  LIGHT */
+    --color-primary-light: #101014;
+    /*  LIGHTER */
+    --color-primary-lighter: #1c1c22;
+
+    /* ACCENT */
+
+    /* default */
     --color-accent: #00ff99;
+    /* greener */
+    /* --color-accent-greener: #00f381; */
+    /* hover */
     --color-accent-hover: #00e187;
+    /* indigo-500 */
+    --color-accent-blue: oklch(58.5% 0.233 277.117);
+    /* violet */
+    --color-accent-violet: rgba(255, 0, 182, 0.15);
+
+    /* OLD ANIMATIONS */
+
+    /* --animate-one: one 10s infinite;
+    @keyframes one {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+        25% {
+            left: -100px;
+            top: 70px;
+        }
+        50% {
+            left: 20px;
+            top: 150px;
+        }
+        75% {
+            left: 50px;
+            top: 100px;
+        }
+        100% {
+            left: 0px;
+            top: 0px;
+        }
+    }
+
+    --animate-two: two 10s infinite;
+    @keyframes two {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+        25% {
+            left: 50px;
+            top: 10px;
+        }
+        50% {
+            left: 100px;
+            top: 50px;
+        }
+        75% {
+            left: 300px;
+            top: 200px;
+        }
+        100% {
+            left: 0px;
+            top: 0px;
+        }
+    } */
+
+    /* ANIMATIONS BACKGROUND */
+
+    --animate-one: one 18s ease-in-out infinite;
+    --animate-two: two 12s ease-in-out infinite;
+    /*
+    Animazione "one":
+    - Durata: 18 secondi (più lenta e fluttuante)
+    - Timing function: ease-in-out (movimento fluido con accelerazione e decelerazione)
+    - Tipo di movimento: Un'orbita ellittica morbida con una leggera "pulsazione" (cambio di scala).
+    - Ideale per un elemento che deve dare un senso di respiro o profondità.
+    */
+    @keyframes one {
+        0% {
+            transform: translate(0px, 0px) scale(1);
+        }
+        25% {
+            /* Spostamento verso sinistra-basso, leggermente più grande */
+            transform: translate(-35px, 45px) scale(1.05);
+        }
+        50% {
+            /* Spostamento verso destra-alto, torna alla scala normale */
+            transform: translate(25px, -30px) scale(1);
+        }
+        75% {
+            /* Spostamento più a destra e leggermente in basso, leggermente più piccolo */
+            transform: translate(45px, 25px) scale(0.95);
+        }
+        100% {
+            /* Ritorno alla posizione e scala iniziali per un loop perfetto */
+            transform: translate(0px, 0px) scale(1);
+        }
+    }
+    /*
+    Animazione "two":
+    - Durata: 12 secondi (un po' più veloce di "one" per creare un contrasto)
+    - Timing function: ease-in-out (movimento fluido)
+    - Tipo di movimento: Un percorso più ampio e diagonale con leggere rotazioni.
+    - Ideale per un elemento che deve sembrare più dinamico e meno prevedibile.
+    */
+    @keyframes two {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        25% {
+            /* Spostamento ampio verso destra-alto, leggera rotazione oraria */
+            transform: translate(55px, -35px);
+        }
+        50% {
+            /* Spostamento verso sinistra-basso, leggera rotazione antioraria */
+            transform: translate(-45px, 50px);
+        }
+        75% {
+            /* Spostamento verso destra-basso, piccola rotazione oraria */
+            transform: translate(30px, 65px);
+        }
+        100% {
+            /* Ritorno alla posizione e rotazione iniziali per un loop perfetto */
+            transform: translate(0px, 0px);
+        }
+    }
 }
 
 @theme inline {
@@ -133,12 +261,19 @@
 }
 
 @layer base {
-    * {
-        /* @apply border-border outline-ring/50; */
-    }
-
     body {
         @apply font-main bg-primary text-white leading-loose /* text-foreground */;
+
+        min-height: 100dvh;
+
+        /* POINTED BACKGROUND */
+
+        /* I puntini sono #ffffff33 (bianco con ~20% di opacità) e grandi 1px. */
+        /* Lo spazio tra i puntini sarà trasparente, mostrando il background-color del body.  */
+        /* background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px); */
+        /* Dimensione della cella per ogni "puntino". */
+        /* Il gradiente (il puntino) verrà ripetuto ogni 20px. */
+        /* background-size: 20px 20px; */
     }
 
     .container {

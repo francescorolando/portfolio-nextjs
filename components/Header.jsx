@@ -20,7 +20,7 @@ const Header = () => {
                 <div className="hidden xl:flex items-center gap-8">
                     <Nav />
                     <Link href="/contact#firstname-input">
-                        <Button>Hire me</Button>
+                        <Button>HIRE ME</Button>
                     </Link>
                 </div>
 

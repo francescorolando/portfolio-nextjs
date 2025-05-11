@@ -6,23 +6,23 @@ import { use } from "react";
 
 const links = [
     {
-        name: "home",
+        name: "HOME",
         path: "/",
     },
     {
-        name: "services",
+        name: "SERVICES",
         path: "/services",
     },
     {
-        name: "resume",
+        name: "RESUME",
         path: "/resume",
     },
     {
-        name: "work",
+        name: "WORK",
         path: "/work",
     },
     {
-        name: "contact",
+        name: "CONTACT",
         path: "/contact",
     },
 ];
