@@ -6,9 +6,9 @@ import Image from "next/image";
 
 const WorkInProgress = () => {
     return (
-        <div className="container mx-auto min-h-[60vh] h-full flex flex-col justify-center items-center">
+        <div className="container mx-auto min-h-[75vh] xl:min-h-[65vh] h-full flex flex-col justify-center items-center">
             <h1 className="mx-5 text-3xl text-center text-accent mb-[30px]">Ooops!</h1>
-            <p className="mx-5 text-2xl text-center text-white mb-[50px]">
+            <p className="mx-5 text-2xl text-center text-white mb-[50px] text-balance">
                 I'm currently working on this section.
             </p>
             <div className="flex items-center justify-center group">
