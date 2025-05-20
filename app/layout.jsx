@@ -16,6 +16,9 @@ const jetBrainsMono = JetBrains_Mono({
 export const metadata = {
     title: "Francesco Rolando",
     description: "Personal portfolio for web development.",
+    other: {
+        "apple-mobile-web-app-title": "F.R.",
+    },
 };
 
 export default function RootLayout({ children }) {
